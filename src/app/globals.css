@@ -405,6 +405,9 @@ body.no-scroll { overflow: hidden; height: 100vh; }
   background: linear-gradient(135deg, #0a1326, #060a14); transform: translateZ(28px); }
 .proj.feature .proj-media { height: 320px; }
 .proj-media .scene { position: absolute; inset: 0; }
+.proj-shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  object-position: top center; display: block; transition: transform 0.5s var(--ease); }
+.proj:hover .proj-shot { transform: scale(1.05); }
 .proj-grid-bg { position: absolute; inset: 0; opacity: 0.5;
   background-image: linear-gradient(rgba(var(--accent-rgb),0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(var(--accent-rgb),0.1) 1px, transparent 1px);

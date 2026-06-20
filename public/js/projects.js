@@ -8,12 +8,11 @@
 
   // category keys -> bilingual labels
   const CATS = {
-    all:        { en: 'All',            fr: 'Tout' },
-    ai:         { en: 'AI & Automation', fr: 'IA & Automatisation' },
-    fintech:    { en: 'Fintech',        fr: 'Fintech' },
-    ecommerce:  { en: 'E-commerce',     fr: 'E-commerce' },
+    all:        { en: 'All',             fr: 'Tout' },
+    ai:         { en: 'AI & Security',   fr: 'IA & Sécurité' },
+    web:        { en: 'Web Platform',    fr: 'Plateforme Web' },
     tooling:    { en: 'Developer Tools', fr: 'Outils Dév' },
-    web:        { en: 'Web Platform',   fr: 'Plateforme Web' }
+    fintech:    { en: 'Fintech',         fr: 'Fintech' }
   };
 
   const STR = {
@@ -31,91 +30,76 @@
     link_demo:{ en: 'Live Demo', fr: 'Démo live' }
   };
 
-  // featured order roughly newest → oldest
+  // Real shipped projects — newest first. `img` = live screenshot, otherwise glyph fallback.
   const PROJECTS = [
-    { id:'aether', cat:'ai', year:2026, glyph:'Æ', featured:true,
-      title:'Aether — Agentic Workflow Engine',
-      tags:['Next.js','TypeScript','Python','Claude API','PostgreSQL','Docker'],
-      desc:{ en:'A no-code platform for building autonomous AI agents. Visual pipeline builder, RAG memory, and a multi-model orchestration layer running 12k+ daily executions at sub-second latency.',
-             fr:"Une plateforme no-code pour construire des agents IA autonomes. Constructeur de pipelines visuel, mémoire RAG et orchestration multi-modèles traitant plus de 12k exécutions/jour en moins d'une seconde." },
-      links:[['case','#'],['demo','#'],['github','#']] },
+    { id:'chatflow', cat:'web', year:2026, glyph:'◐', featured:true,
+      img:'/img/projects/chatflow.png',
+      title:'ChatFlow — Real-time Messaging',
+      tags:['Next.js 16','TypeScript','Socket.IO','Prisma'],
+      desc:{ en:'A production-ready real-time messaging app — private DMs, group chats, voice messages, search and live presence. Built with Next.js 16 and Socket.IO.',
+             fr:'Une application de messagerie en temps réel prête pour la production — DM privés, chats de groupe, messages vocaux, recherche et présence en direct. Construite avec Next.js 16 et Socket.IO.' },
+      links:[['live','https://chat-flow-delta-inky.vercel.app'],['github','https://github.com/hamilton-k-dev/chatFlow']] },
 
-    { id:'nimbus', cat:'fintech', year:2025, glyph:'◈',
-      title:'Nimbus Ledger',
-      tags:['React','Node.js','PostgreSQL','Redis'],
-      desc:{ en:'Real-time treasury dashboard processing 2M+ transactions/day with live anomaly detection.',
-             fr:"Tableau de bord de trésorerie en temps réel traitant plus de 2M de transactions/jour avec détection d'anomalies." },
-      links:[['case','#'],['live','#']] },
+    { id:'phishguard', cat:'ai', year:2026, glyph:'⌬', featured:true,
+      img:'/img/projects/phishing.png',
+      title:'PhishGuard — Phishing Detection',
+      tags:['Next.js','TypeScript','Machine Learning','Python'],
+      desc:{ en:'Paste any suspicious URL and PhishGuard scans it in seconds — checking phishing indicators, malicious keywords and domain reputation with an ML classifier.',
+             fr:"Collez une URL suspecte et PhishGuard l'analyse en quelques secondes — vérification des indicateurs de phishing, mots-clés malveillants et réputation du domaine via un classifieur ML." },
+      links:[['live','https://phishing-detection-app-delta.vercel.app'],['github','https://github.com/hamilton-k-dev/phishing_detection_app']] },
 
-    { id:'forge', cat:'tooling', year:2025, glyph:'⬡',
-      title:'Forge CLI',
-      tags:['Node.js','TypeScript'],
-      desc:{ en:'Developer scaffolding tool. 8k+ npm weekly installs.',
-             fr:'Outil de scaffolding pour développeurs. Plus de 8k installations npm hebdomadaires.' },
-      links:[['github','#']] },
+    { id:'pdfforge', cat:'tooling', year:2026, glyph:'⬡',
+      img:'/img/projects/pdfforge.png',
+      title:'PDFForge — PDF Toolkit',
+      tags:['Next.js','TypeScript','pdf-lib'],
+      desc:{ en:'Every PDF tool in one place — merge, split, compress, convert, watermark and secure PDFs, all in the browser with no installs.',
+             fr:'Tous les outils PDF au même endroit — fusionner, diviser, compresser, convertir, filigraner et sécuriser des PDF, directement dans le navigateur sans installation.' },
+      links:[['live','https://pdf-forge-tan.vercel.app'],['github','https://github.com/hamilton-k-dev/PDFForge']] },
 
-    { id:'lumen', cat:'ecommerce', year:2024, glyph:'⟁',
-      title:'Lumen Store',
-      tags:['Next.js','Three.js','Symfony'],
-      desc:{ en:'Headless commerce experience with 3D product configurator and sub-1s checkout.',
-             fr:"Expérience e-commerce headless avec configurateur produit 3D et paiement en moins d'une seconde." },
-      links:[['case','#'],['live','#']] },
+    { id:'quizmaster', cat:'web', year:2026, glyph:'◈',
+      img:'/img/projects/quizz.png',
+      title:'QuizMaster — Quiz Platform',
+      tags:['Next.js','TypeScript','Prisma','PostgreSQL'],
+      desc:{ en:'A modern quiz platform — build engaging quizzes, track student performance in real time and gain deep insights, all in one beautifully designed place.',
+             fr:'Une plateforme de quiz moderne — créez des quiz engageants, suivez les performances des étudiants en temps réel et obtenez des analyses détaillées, le tout au même endroit.' },
+      links:[['live','https://quizz-platforme.vercel.app'],['github','https://github.com/hamilton-k-dev/quizz_platforme']] },
 
-    { id:'sentinel', cat:'ai', year:2024, glyph:'⌬',
-      title:'Sentinel Ops',
-      tags:['Python','OpenAI','Docker'],
-      desc:{ en:'Autonomous incident-response bot that triages alerts and drafts post-mortems.',
-             fr:'Bot autonome de réponse aux incidents qui trie les alertes et rédige les post-mortems.' },
-      links:[['case','#'],['github','#']] },
+    { id:'authstarter', cat:'tooling', year:2026, glyph:'⬢',
+      img:'/img/projects/betterauth.png',
+      title:'Next.js Auth Starter',
+      tags:['Next.js 16','better-auth','Prisma','Neon','Resend'],
+      desc:{ en:'Production-ready authentication starter — email & password, magic links, Google & GitHub OAuth, role-based access, email verification and password reset, all wired up.',
+             fr:"Starter d'authentification prêt pour la production — email & mot de passe, liens magiques, OAuth Google & GitHub, accès par rôles, vérification email et réinitialisation, tout est câblé." },
+      links:[['live','https://nextjs-better-auth-stater-three.vercel.app'],['github','https://github.com/hamilton-k-dev/nextjs-better-auth-stater']] },
 
-    { id:'pulse', cat:'web', year:2025, glyph:'◐',
-      title:'Pulse Analytics',
-      tags:['React','D3.js','Node.js','ClickHouse'],
-      desc:{ en:'Privacy-first product analytics with real-time funnels and cohort retention heatmaps.',
-             fr:'Analytique produit respectueuse de la vie privée avec entonnoirs temps réel et cartes de rétention.' },
-      links:[['case','#'],['live','#']] },
+    { id:'basicauth', cat:'tooling', year:2025, glyph:'◇',
+      img:'/img/projects/basicauth.png',
+      title:'Basic-Auth Module',
+      tags:['Next.js 15','TypeScript','Auth'],
+      desc:{ en:'A lightweight, drop-in authentication module with login and registration flows, built on Next.js 15.',
+             fr:"Un module d'authentification léger et prêt à l'emploi avec connexion et inscription, construit avec Next.js 15." },
+      links:[['live','https://basic-auth-puce.vercel.app'],['github','https://github.com/hamilton-k-dev/basic_auth']] },
 
-    { id:'vault', cat:'fintech', year:2023, glyph:'⬢',
-      title:'Vault Pay',
-      tags:['Symfony','Vue','PostgreSQL','Stripe'],
-      desc:{ en:'PCI-compliant payment orchestration layer routing across 6 providers with smart retries.',
-             fr:'Couche d\u2019orchestration de paiement conforme PCI routant sur 6 prestataires avec relances intelligentes.' },
-      links:[['case','#']] },
+    { id:'prismaauth', cat:'tooling', year:2025, glyph:'❖',
+      title:'Next.js + Prisma Auth System',
+      tags:['Next.js','Prisma','PostgreSQL','2FA'],
+      desc:{ en:'Full-stack auth with credential and social login (Google & GitHub), role-based access control, email verification and two-factor authentication via email OTP.',
+             fr:"Authentification full-stack avec connexion par identifiants et sociale (Google & GitHub), contrôle d'accès par rôles, vérification email et double authentification par OTP." },
+      links:[['github','https://github.com/hamilton-k-dev/complte-nextjs-prisma-auth']] },
 
-    { id:'atlas', cat:'tooling', year:2023, glyph:'◇',
-      title:'Atlas Design Tokens',
-      tags:['TypeScript','Style Dictionary','Figma API'],
-      desc:{ en:'Token pipeline syncing Figma variables to web, iOS, and Android in a single source of truth.',
-             fr:'Pipeline de tokens synchronisant les variables Figma vers web, iOS et Android, une seule source de vérité.' },
-      links:[['github','#'],['case','#']] },
+    { id:'voting', cat:'web', year:2025, glyph:'⊛',
+      title:'Online Voting System',
+      tags:['Next.js','Prisma','MySQL'],
+      desc:{ en:'A secure online voting system — create polls, cast votes securely and watch results update in real time.',
+             fr:'Un système de vote en ligne sécurisé — créez des sondages, votez en toute sécurité et suivez les résultats en temps réel.' },
+      links:[['github','https://github.com/hamilton-k-dev/online-voting-system']] },
 
-    { id:'orbit', cat:'web', year:2024, glyph:'⊛',
-      title:'Orbit CMS',
-      tags:['Next.js','GraphQL','Prisma','tRPC'],
-      desc:{ en:'Headless CMS with block-based editing, live preview, and edge-cached delivery worldwide.',
-             fr:'CMS headless avec édition par blocs, aperçu en direct et diffusion mise en cache à la périphérie.' },
-      links:[['case','#'],['live','#']] },
-
-    { id:'mason', cat:'ecommerce', year:2023, glyph:'⬣',
-      title:'Mason Marketplace',
-      tags:['React','Node.js','Elasticsearch','Redis'],
-      desc:{ en:'Multi-vendor marketplace with faceted search across 200k+ SKUs and split settlements.',
-             fr:'Place de marché multi-vendeurs avec recherche à facettes sur plus de 200k références et règlements partagés.' },
-      links:[['case','#']] },
-
-    { id:'cortex', cat:'ai', year:2025, glyph:'❖',
-      title:'Cortex Search',
-      tags:['Python','LangChain','pgvector','FastAPI'],
-      desc:{ en:'Semantic search-as-a-service over enterprise docs with hybrid reranking and citations.',
-             fr:'Recherche sémantique en tant que service sur documents d\u2019entreprise avec reranking hybride et citations.' },
-      links:[['demo','#'],['github','#']] },
-
-    { id:'beacon', cat:'web', year:2022, glyph:'△',
-      title:'Beacon Studio Site',
-      tags:['Astro','GSAP','Three.js'],
-      desc:{ en:'Award-considered marketing site for a design studio — scroll-driven WebGL throughout.',
-             fr:'Site vitrine primé pour un studio de design — WebGL piloté par le scroll de bout en bout.' },
-      links:[['live','#']] }
+    { id:'expense', cat:'fintech', year:2025, glyph:'◆',
+      title:'Expense Tracker',
+      tags:['Next.js','TypeScript','Charts'],
+      desc:{ en:'A personal finance tracker — log income and expenses, break them down by category and visualise spending over time.',
+             fr:'Un suivi de finances personnelles — enregistrez revenus et dépenses, ventilez-les par catégorie et visualisez vos dépenses dans le temps.' },
+      links:[['github','https://github.com/hamilton-k-dev/Expense-Tracker']] }
   ];
 
   const lang = () => (window.I18N ? window.I18N.current : 'en');
@@ -125,11 +109,13 @@
   const ext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>';
   const gh = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>';
 
-  function linkHtml(kind) {
-    if (kind === 'github') return `<a class="proj-link" href="#">${gh}GitHub</a>`;
-    if (kind === 'demo')   return `<a class="proj-link" href="#">${ext}${t(STR.link_demo)}</a>`;
-    if (kind === 'live')   return `<a class="proj-link" href="#">${ext}${t(STR.link_live)}</a>`;
-    return `<a class="proj-link" href="#">${arrow}${t(STR.link_case)}</a>`;
+  function linkHtml(kind, url) {
+    const href = url || '#';
+    const blank = href !== '#' ? ' target="_blank" rel="noopener noreferrer"' : '';
+    if (kind === 'github') return `<a class="proj-link" href="${href}"${blank}>${gh}GitHub</a>`;
+    if (kind === 'demo')   return `<a class="proj-link" href="${href}"${blank}>${ext}${t(STR.link_demo)}</a>`;
+    if (kind === 'live')   return `<a class="proj-link" href="${href}"${blank}>${ext}${t(STR.link_live)}</a>`;
+    return `<a class="proj-link" href="${href}"${blank}>${arrow}${t(STR.link_case)}</a>`;
   }
 
   const grid = $('#archive-grid');
@@ -137,10 +123,13 @@
   function cardHtml(p) {
     const cat = CATS[p.cat] ? t(CATS[p.cat]) : p.cat;
     const tags = p.tags.map(x => `<span>${x}</span>`).join('');
-    const links = p.links.map(l => linkHtml(l[0])).join('');
+    const links = p.links.map(l => linkHtml(l[0], l[1])).join('');
+    const media = p.img
+      ? `<div class="proj-media"><img class="proj-shot" src="${p.img}" alt="${p.title} screenshot" loading="lazy" /><div class="proj-shine"></div></div>`
+      : `<div class="proj-media"><div class="proj-grid-bg"></div><div class="proj-glyph">${p.glyph}</div><div class="proj-shine"></div></div>`;
     return `<article class="proj glass" data-cat="${p.cat}" data-search="${(p.title + ' ' + p.tags.join(' ')).toLowerCase()}">
       <div class="proj-glow-border"></div>
-      <div class="proj-media"><div class="proj-grid-bg"></div><div class="proj-glyph">${p.glyph}</div><div class="proj-shine"></div></div>
+      ${media}
       <div class="proj-body">
         <div class="proj-top"><span class="proj-cat">${cat}${p.featured ? ' · ★' : ''}</span><span class="proj-year">${p.year}</span></div>
         <h3>${p.title}</h3>
