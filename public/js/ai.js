@@ -25,6 +25,7 @@ SKILLS / EXPERTISE (proficiency)
 - Backend expertise summary: designs robust, scalable APIs and data layers — Node.js/Express and PHP/Symfony services, PostgreSQL schemas, Redis caching and queues, REST & GraphQL. Has cut p95 latency by 60% on a multi-tenant SaaS and built PCI-compliant payment orchestration.
 
 PROJECTS (real, shipped — all open-source at github.com/hamilton-k-dev)
+- SchoolX (2026, Web/SaaS): Hamilton's flagship project. A multi-tenant school-management platform for francophone schools — grades (notes), timetables (emplois du temps) and report cards (bulletins) in one branded space, with each school's own brand, domain and language, plus AI-generated report cards. Stack: Next.js, TypeScript, Prisma, PostgreSQL, multi-tenant architecture. Live (schoolx-beta.vercel.app) + open-source. Featured / top project.
 - ChatFlow (2026, Web): production-ready real-time messaging app — private DMs, group chats, voice messages, search and live presence. Stack: Next.js 16, TypeScript, Socket.IO, Prisma. Live demo + open-source. Featured.
 - PhishGuard (2026, AI & Security): paste any suspicious URL and it scans in seconds — checking phishing indicators, malicious keywords and domain reputation with an ML classifier. Stack: Next.js, TypeScript, Machine Learning, Python. Live demo + open-source. Featured.
 - PDFForge (2026, Developer Tools): all-in-one browser PDF toolkit — merge, split, compress, convert, watermark and secure PDFs, entirely client-side with no installs. Stack: Next.js, TypeScript, pdf-lib. Live demo + open-source.

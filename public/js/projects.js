@@ -32,6 +32,14 @@
 
   // Real shipped projects — newest first. `img` = live screenshot, otherwise glyph fallback.
   const PROJECTS = [
+    { id:'schoolx', cat:'web', year:2026, glyph:'⬡', featured:true,
+      img:'/img/projects/schoolx.png',
+      title:'SchoolX — School Management SaaS',
+      tags:['Next.js','TypeScript','Prisma','PostgreSQL','Multi-tenant'],
+      desc:{ en:'A multi-tenant school-management platform for francophone schools — grades, timetables and report cards in one branded space, with your own domain and language, plus AI-generated report cards.',
+             fr:'Une plateforme de gestion scolaire multi-locataire pour les écoles francophones — notes, emplois du temps et bulletins dans un seul espace à votre marque, avec votre domaine et votre langue, et des bulletins générés par IA.' },
+      links:[['live','https://schoolx-beta.vercel.app'],['github','https://github.com/hamilton-k-dev/schoolx']] },
+
     { id:'chatflow', cat:'web', year:2026, glyph:'◐', featured:true,
       img:'/img/projects/chatflow.png',
       title:'ChatFlow — Real-time Messaging',
