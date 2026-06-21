@@ -7,7 +7,7 @@ export default function ProjectsPage() {
       html={PROJECTS_HTML}
       bodyClass="page-projects"
       tweaks={{ accent: '#a855f7', accent2: '#00e5ff', blur: 18 }}
-      scripts={['/js/i18n.js', '/js/projects.js', '/js/chrome.js', '/js/ai.js']}
+      scripts={['/js/i18n.js', '/js/projects.js', '/js/chrome.js', '/js/claude-shim.js', '/js/ai.js']}
     />
   );
 }

@@ -13,6 +13,7 @@ export default function HomePage() {
         '/js/i18n.js',
         '/js/app.js',
         '/js/lab-details.js',
+        '/js/claude-shim.js',
         '/js/ai.js',
       ]}
     />
