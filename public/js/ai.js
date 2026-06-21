@@ -24,19 +24,16 @@ SKILLS / EXPERTISE (proficiency)
 - Infra / DevOps: Docker (82%), CI/CD, AWS, Vercel.
 - Backend expertise summary: designs robust, scalable APIs and data layers — Node.js/Express and PHP/Symfony services, PostgreSQL schemas, Redis caching and queues, REST & GraphQL. Has cut p95 latency by 60% on a multi-tenant SaaS and built PCI-compliant payment orchestration.
 
-PROJECTS (selected / archive)
-- Aether — Agentic Workflow Engine (2026, AI): no-code platform for autonomous AI agents; visual pipeline builder, RAG memory, multi-model orchestration; 12k+ daily executions, sub-second latency. Stack: Next.js, TypeScript, Python, Claude API, PostgreSQL, Docker. Featured.
-- Nimbus Ledger (2025, Fintech): real-time treasury dashboard, 2M+ transactions/day, live anomaly detection. Stack: React, Node.js, PostgreSQL, Redis.
-- Forge CLI (2025, Developer Tools): developer scaffolding tool, 8k+ npm weekly installs. Stack: Node.js, TypeScript.
-- Lumen Store (2024, E-commerce): headless commerce with 3D product configurator and sub-1s checkout. Stack: Next.js, Three.js, Symfony.
-- Sentinel Ops (2024, AI/Automation): autonomous incident-response bot that triages alerts and drafts post-mortems. Stack: Python, OpenAI, Docker.
-- Pulse Analytics (2025, Web): privacy-first product analytics, real-time funnels, cohort retention heatmaps. Stack: React, D3.js, Node.js, ClickHouse.
-- Vault Pay (2023, Fintech): PCI-compliant payment orchestration across 6 providers with smart retries. Stack: Symfony, Vue, PostgreSQL, Stripe.
-- Atlas Design Tokens (2023, Tools): token pipeline syncing Figma variables to web/iOS/Android. Stack: TypeScript, Style Dictionary, Figma API.
-- Orbit CMS (2024, Web): headless CMS with block editing, live preview, edge-cached delivery. Stack: Next.js, GraphQL, Prisma, tRPC.
-- Mason Marketplace (2023, E-commerce): multi-vendor marketplace, faceted search over 200k+ SKUs, split settlements. Stack: React, Node.js, Elasticsearch, Redis.
-- Cortex Search (2025, AI): semantic search-as-a-service over enterprise docs, hybrid reranking, citations. Stack: Python, LangChain, pgvector, FastAPI.
-- Beacon Studio Site (2022, Web): award-considered marketing site, scroll-driven WebGL. Stack: Astro, GSAP, Three.js.
+PROJECTS (real, shipped — all open-source at github.com/hamilton-k-dev)
+- ChatFlow (2026, Web): production-ready real-time messaging app — private DMs, group chats, voice messages, search and live presence. Stack: Next.js 16, TypeScript, Socket.IO, Prisma. Live demo + open-source. Featured.
+- PhishGuard (2026, AI & Security): paste any suspicious URL and it scans in seconds — checking phishing indicators, malicious keywords and domain reputation with an ML classifier. Stack: Next.js, TypeScript, Machine Learning, Python. Live demo + open-source. Featured.
+- PDFForge (2026, Developer Tools): all-in-one browser PDF toolkit — merge, split, compress, convert, watermark and secure PDFs, entirely client-side with no installs. Stack: Next.js, TypeScript, pdf-lib. Live demo + open-source.
+- QuizMaster (2026, Web): modern quiz platform — build engaging quizzes, track student performance in real time and gain insights. Stack: Next.js, TypeScript, Prisma, PostgreSQL. Live demo + open-source.
+- Next.js Auth Starter (2026, Developer Tools): production-ready authentication starter — email & password, magic links, Google & GitHub OAuth, role-based access control, email verification and password reset. Stack: Next.js 16, better-auth, Prisma, Neon, Resend. Live demo + open-source.
+- Basic-Auth Module (2025, Developer Tools): lightweight, drop-in authentication module with login and registration flows. Stack: Next.js 15, TypeScript. Live demo + open-source.
+- Next.js + Prisma Auth System (2025, Developer Tools): full-stack auth with credential and social login (Google & GitHub), role-based access control, email verification and two-factor authentication via email OTP. Stack: Next.js, Prisma, PostgreSQL. Open-source.
+- Online Voting System (2025, Web): secure online voting system — create polls, vote securely and view real-time results. Stack: Next.js, Prisma, MySQL. Open-source.
+- Expense Tracker (2025, Fintech): personal finance tracker — log income and expenses with category breakdowns and visual reports. Stack: Next.js, TypeScript, Charts. Open-source.
 
 EXPERIENCE / JOURNEY
 - 2024–present: Freelance Full-Stack & AI Engineer — AI-native products for startups worldwide; agentic systems, RAG pipelines, cinematic web experiences.
@@ -52,7 +49,7 @@ LAB (experiments)
 - R&D: Edge Inference (quantized models on Cloudflare Workers, WIP), Latency Budgets (sub-100ms agentic UX research, WIP).
 
 CONTACT
-- GitHub @hamiltonkenfack, LinkedIn /in/hamiltonkenfack, X @hk_builds, Email hello@hkenfack.dev, Upwork (Top Rated, 100% job success).
+- GitHub: github.com/hamilton-k-dev (all projects above are open-source here). LinkedIn /in/hamiltonkenfack, X @hk_builds, Upwork (Top Rated, 100% job success).
 `;
 
   const UI = {
