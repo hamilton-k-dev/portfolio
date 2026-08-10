@@ -1028,11 +1028,31 @@ body.no-scroll {
   margin-left: 10px;
   letter-spacing: 0.1em;
 }
-.skill-row .pct {
+.skill-row .facts {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-family: "JetBrains Mono", monospace;
   font-size: 12px;
-  color: var(--accent);
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
+.skill-row .facts b {
+  color: var(--accent);
+  font-weight: 600;
+}
+.skill-row .sep {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--muted);
+  opacity: 0.5;
+  margin: 0 4px;
+  flex: none;
+}
+/* La longueur de la barre encode le nombre de projets livres (pleine = 8),
+   pas un niveau de maitrise auto-evalue. */
 .bar {
   height: 6px;
   border-radius: 100px;

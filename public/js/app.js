@@ -213,6 +213,7 @@
   window.addEventListener('scroll', checkBars, { passive: true });
   setTimeout(checkBars, 500);
 
+
   /* ============================================================
      TIMELINE BEAM + NODE LIGHTING
      ============================================================ */

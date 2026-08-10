@@ -26,7 +26,8 @@
     skills_title: 'Une stack redoutable.',
     skills_sub: "Des outils éprouvés sur tout le cycle de vie — du pixel au pipeline jusqu'à l'inférence en production.",
     cat_frontend: 'Frontend', cat_language: 'Langage', cat_backend: 'Backend',
-    cat_intelligence: 'Intelligence', cat_infra: 'Infra',
+    cat_intelligence: 'Intelligence', cat_infra: 'Infra', cat_data: 'Données',
+    sk_shipped: 'projets livrés', sk_shipped_one: 'projet livré',
     // projects
     proj_eyebrow: '03 — Centre de Commande',
     proj_title: 'Déploiements sélectionnés.',
