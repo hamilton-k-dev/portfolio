@@ -69,7 +69,7 @@
     lab_ai_3: 'Un moteur RAG de 200 lignes qui tourne entièrement dans le navigateur.',
     lab_os_1: 'Hook React pour un glassmorphism performant. 1.2k★.',
     lab_os_2: 'Types Result façon Rust pour TypeScript.',
-    lab_os_3: 'Shader de grille à scroll infini. Archivé, toujours forké.',
+    lab_os_3: 'Grille infinie dessinée dans un fragment shader. Coût constant à tout zoom.',
     lab_auto_1: 'Agent LLM qui étiquette et rédige des réponses.',
     lab_auto_2: 'Rollback automatique sur anomalie des métriques CI.',
     lab_side_1: 'Un synthé web-audio avec arpégiateur génératif.',

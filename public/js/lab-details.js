@@ -84,7 +84,7 @@
       learned: { en: ['Ergonomics decide adoption — without `match`, nobody used it.', 'Keeping it dependency-free and tiny was why teams trusted it.', 'Porting an idea across languages teaches you what was essential vs incidental.'],
                  fr: ['L\u2019ergonomie décide de l\u2019adoption — sans `match`, personne ne l\u2019utilisait.', 'Le garder sans dépendance et minuscule a inspiré confiance aux équipes.', 'Porter une idée d\u2019un langage à l\u2019autre révèle l\u2019essentiel de l\u2019accessoire.'] } },
 
-    webglgrid: { name: 'webgl-grid', status: 'archived',
+    webglgrid: { name: 'webgl-grid', status: 'live',
       cat: { en: 'Open Source', fr: 'Open Source' },
       tagline: { en: 'An infinite, GPU-driven grid shader for endless canvases.', fr: 'Un shader de grille infinie piloté par GPU pour canevas sans fin.' },
       problem: { en: 'Rendering a pannable infinite grid with DOM or canvas2D chokes past a few thousand cells. I wanted buttery infinite zoom for node editors.', fr: 'Rendre une grille infinie déplaçable en DOM ou canvas2D s\u2019étouffe au-delà de quelques milliers de cellules. Je voulais un zoom infini fluide pour éditeurs de nœuds.' },
@@ -93,8 +93,8 @@
               ['Fragment shader', { en: 'grid math per pixel', fr: 'calcul de grille par pixel' }],
               ['Uniform camera', { en: 'pan / zoom via 1 matrix', fr: 'pan / zoom via 1 matrice' }],
               ['No DOM nodes', { en: 'constant memory', fr: 'mémoire constante' }] ],
-      learned: { en: ['Moving layout math to the GPU flipped a perf cliff into a flat line.', 'Archived not because it failed but because the use-case moved on — the shader still gets forked.', 'Sometimes the best outcome of an experiment is a technique you reuse elsewhere.'],
-                 fr: ['Déplacer le calcul de mise en page vers le GPU a transformé une falaise de perf en ligne plate.', 'Archivé non par échec mais parce que le cas d\u2019usage a évolué — le shader est toujours forké.', 'Parfois le meilleur résultat d\u2019une expérience est une technique réutilisée ailleurs.'] } },
+      learned: { en: ['Measured: at 65k lines the shader holds 120 FPS while canvas2D halves and the DOM collapses.', 'The honest counterpoint: with a correct level of detail, a canvas2D grid is not slow either.', 'The real win is that LOD, anti-aliasing and constant line width come free with the fragment shader.'],
+                 fr: ['Mesuré : à 65k lignes le shader tient 120 FPS quand canvas2D est divisé par deux et le DOM s\u2019effondre.', 'Le contrepoint honnête : avec un bon niveau de détail, une grille canvas2D n\u2019est pas lente non plus.', 'Le vrai gain : LOD, anticrénelage et épaisseur constante sont offerts par le fragment shader.'] } },
 
     inboxtriage: { name: 'Inbox Triage Bot', status: 'live',
       cat: { en: 'Automation', fr: 'Automatisation' },
@@ -129,8 +129,8 @@
               ['Arp engine', { en: 'scale-aware note generator', fr: 'générateur de notes selon la gamme' }],
               ['AnalyserNode', { en: 'drives the visuals', fr: 'pilote les visuels' }],
               ['Canvas viz', { en: 'real-time spectrum', fr: 'spectre en temps réel' }] ],
-      learned: { en: ['Audio scheduling is unforgiving — you schedule ahead of time, not on the beat.', 'Building a toy taught me more Web Audio than any tutorial.', 'Tying visuals to the analyser made it feel alive with almost no extra code.'],
-                 fr: ['L\u2019ordonnancement audio est impitoyable — on planifie en avance, pas sur le temps.', 'Construire un jouet m\u2019a appris plus de Web Audio que n\u2019importe quel tuto.', 'Lier les visuels à l\u2019analyseur l\u2019a rendu vivant avec presque aucun code en plus.'] } },
+      learned: { en: ['You schedule ahead of time, not on the beat. Measured: a self-correcting setTimeout averages 2.6ms of error but still drops single notes 97ms late \u2014 the lookahead scheduler is exact.', 'The cutoff knob did nothing under a held note until the cutoff became a shared audio signal summed into each voice\u2019s filter, instead of a number set at note-on.', 'Tying visuals to the analyser made it feel alive with almost no extra code.'],
+                 fr: ['On planifie en avance, pas sur le temps. Mesuré : un setTimeout auto-corrigé fait 2,6 ms d\u2019erreur en moyenne mais lâche encore des notes à 97 ms \u2014 l\u2019ordonnanceur en avance est exact.', 'Le bouton de coupure ne faisait rien sous une note tenue, jusqu\u2019à ce que la coupure devienne un signal audio partagé sommé dans le filtre de chaque voix.', 'Lier les visuels à l\u2019analyseur l\u2019a rendu vivant avec presque aucun code en plus.'] } },
 
     focusboard: { name: 'Focusboard', status: 'wip',
       cat: { en: 'Side Project', fr: 'Projet perso' },
@@ -141,8 +141,8 @@
               ['CRDT-ready model', { en: 'conflict-free future sync', fr: 'sync future sans conflit' }],
               ['Keyboard layer', { en: 'everything without a mouse', fr: 'tout sans la souris' }],
               ['No server', { en: 'works fully offline', fr: 'fonctionne hors-ligne' }] ],
-      learned: { en: ['Constraints are a feature — saying no to features is what makes it calm.', 'Local-first is liberating but "where\u2019s my data" anxiety is real; export matters.', 'Still WIP: optional sync without betraying the no-cloud promise.'],
-                 fr: ['Les contraintes sont une fonctionnalité — dire non aux features est ce qui le rend calme.', 'Le local-first libère, mais l\u2019angoisse « où sont mes données » est réelle ; l\u2019export compte.', 'Toujours en cours : une sync optionnelle sans trahir la promesse sans-cloud.'] } },
+      learned: { en: ['Constraints are a feature — the tempting one was a focus timer, which is exactly the thing that would nag.', 'The merge is implemented and demonstrated, not promised: two separate browser profiles edit offline, exchange a file, and converge. The unit of conflict is the field, not the task.', 'A replica whose clock runs behind loses every conflict forever unless the timestamps absorb skew — its user watches their own typing revert.'],
+                 fr: ['Les contraintes sont une fonctionnalité — le tentant était un minuteur, c\u2019est-à-dire exactement la chose qui harcèle.', 'La fusion est implémentée et démontrée, pas promise : deux profils navigateur distincts éditent hors-ligne, échangent un fichier et convergent. Le conflit se joue au champ, pas à la tâche.', 'Un réplica dont l\u2019horloge retarde perd tous les conflits pour toujours, sauf si les horodatages absorbent le décalage — son utilisateur voit sa propre saisie s\u2019annuler.'] } },
 
     edgeinference: { name: 'Edge Inference', status: 'wip',
       cat: { en: 'R&D', fr: 'R&D' },
@@ -153,8 +153,8 @@
               ['Workers runtime', { en: 'runs at 300+ edge POPs', fr: 'tourne sur 300+ POPs edge' }],
               ['Cache layer', { en: 'memoizes hot inputs', fr: 'mémorise les entrées fréquentes' }],
               ['Fallback to central', { en: 'for heavy requests', fr: 'pour les requêtes lourdes' }] ],
-      learned: { en: ['Cold starts dominate the story — keeping models tiny matters more than raw speed.', 'Edge wins for classification/embeddings; generation still wants the big iron.', 'Still researching the quality/latency trade-off curve.'],
-                 fr: ['Les démarrages à froid dominent — garder les modèles minuscules compte plus que la vitesse brute.', 'L\u2019edge gagne pour classification/embeddings ; la génération veut encore les gros serveurs.', 'Recherche en cours sur la courbe qualité/latence.'] } },
+      learned: { en: ['I expected cold start to dominate. It does not: cold isolates answered in 167.7ms against 170.0ms warm — the difference sits inside the noise of opening a connection. Cold start dominates when the model must be LOADED; 32kB inlined in the bundle has nothing to wait for.', 'Edge wins on latency, decisively: 47.8ms p50 against 1218.7ms for a frontier model doing the same job. On accuracy it does not win — 99.0% vs 95.0% on 100 messages, with confidence intervals that overlap heavily.', 'The cache layer buys nothing: 0.5ms saved out of a 47ms round trip, because the thing being cached takes microseconds. Kept and honestly labelled rather than quietly called a performance feature.'],
+                 fr: ['J\u2019attendais que le démarrage à froid domine. Il ne domine pas : 167,7 ms à froid contre 170,0 ms à chaud — l\u2019écart tient dans le bruit d\u2019ouverture de connexion. Le démarrage à froid domine quand le modèle doit être CHARGÉ ; 32 ko inlinés dans le bundle n\u2019attendent rien.', 'L\u2019edge gagne sur la latence, nettement : 47,8 ms p50 contre 1218,7 ms pour un modèle de pointe sur la même tâche. Sur l\u2019exactitude il ne gagne pas — 99,0 % contre 95,0 % sur 100 messages, avec des intervalles de confiance qui se chevauchent largement.', 'La couche de cache n\u2019apporte rien : 0,5 ms gagnées sur un aller-retour de 47 ms, parce que ce qu\u2019elle mémorise prend des microsecondes. Conservée et étiquetée honnêtement plutôt que présentée comme un gain de performance.'] } },
 
     latencybudgets: { name: 'Latency Budgets', status: 'wip',
       cat: { en: 'R&D', fr: 'R&D' },
@@ -165,8 +165,8 @@
               ['Token streaming', { en: 'first token < 200ms', fr: 'premier token < 200ms' }],
               ['Speculative prefetch', { en: 'predict the next action', fr: 'prédire l\u2019action suivante' }],
               ['Intent skeletons', { en: 'shape before content', fr: 'la forme avant le contenu' }] ],
-      learned: { en: ['Time-to-first-feedback beats time-to-completion for perceived speed.', 'Streaming changes the contract: users forgive slow if they see motion.', 'This is ongoing — the goal is a reusable "latency budget" checklist for AI UIs.'],
-                 fr: ['Le délai avant premier retour bat le délai d\u2019achèvement pour la vitesse perçue.', 'Le streaming change le contrat : on pardonne la lenteur si l\u2019on voit du mouvement.', 'En cours — l\u2019objectif est une checklist réutilisable de « budget latence » pour les UI IA.'] } }
+      learned: { en: ['Time-to-first-feedback turned out not to discriminate at all: all seven patterns reach it in 1ms, plain spinner included. The metric that separates them is the longest stretch where nothing changes — 4429ms behind a spinner, 2320ms when streaming.', 'A skeleton and a spinner are objectively identical here, to the millisecond. Any advantage a skeleton has is perceptual, which is exactly what this cannot measure. A skeleton sized by guesswork is the only strictly harmful pattern in the set: same timings, plus a 97px collapse.', 'I did NOT measure perceived speed. That needs participants. The forced-choice harness is built, blind and order-randomised, and it ships with zero trials in it.'],
+                 fr: ['Le délai avant premier retour ne discrimine rien : les sept patterns l\u2019atteignent en 1 ms, simple spinner compris. Ce qui les sépare est la plus longue plage où rien ne change — 4429 ms derrière un spinner, 2320 ms en streaming.', 'Un squelette et un spinner sont objectivement identiques ici, à la milliseconde près. L\u2019avantage d\u2019un squelette est perceptuel, c\u2019est-à-dire précisément ce qui n\u2019est pas mesurable ici. Un squelette mal dimensionné est le seul pattern strictement nuisible du lot : mêmes chiffres, plus un effondrement de 97 px.', 'Je n\u2019ai PAS mesuré la vitesse perçue. Cela demande des participants. Le harnais de choix forcé est construit, en aveugle et en ordre aléatoire, et il est livré avec zéro essai dedans.'] } }
   };
 
   /* ---------- build modal ---------- */
