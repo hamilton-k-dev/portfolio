@@ -102,12 +102,13 @@
              fr:'Un système de vote en ligne sécurisé — créez des sondages, votez en toute sécurité et suivez les résultats en temps réel.' },
       links:[['github','https://github.com/hamilton-k-dev/online-voting-system']] },
 
-    { id:'expense', cat:'fintech', year:2025, glyph:'◆',
-      title:'Expense Tracker',
-      tags:['Next.js','TypeScript','Charts'],
-      desc:{ en:'A personal finance tracker — log income and expenses, break them down by category and visualise spending over time.',
-             fr:'Un suivi de finances personnelles — enregistrez revenus et dépenses, ventilez-les par catégorie et visualisez vos dépenses dans le temps.' },
-      links:[['github','https://github.com/hamilton-k-dev/Expense-Tracker']] }
+    { id:'expense', cat:'fintech', year:2026, glyph:'◆',
+      img:'/img/projects/expenseiq.png',
+      title:'ExpenseIQ — Personal Finance',
+      tags:['Next.js','better-auth','Prisma'],
+      desc:{ en:'Track income, expenses and monthly budgets per category, with six-month charts and first-class support for African currencies — XAF, XOF, NGN and more. French and English.',
+             fr:'Suivez revenus, dépenses et budgets mensuels par catégorie, avec des graphiques sur six mois et une prise en charge native des devises africaines — XAF, XOF, NGN et plus. Français et anglais.' },
+      links:[['live','https://expense-tracker-ppup.vercel.app/'],['github','https://github.com/hamilton-k-dev/expense-tracker']] }
   ];
 
   const lang = () => (window.I18N ? window.I18N.current : 'en');
