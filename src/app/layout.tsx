@@ -19,7 +19,7 @@ const siteUrl =
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : 'http://localhost:3000');
 
-const title = 'Hamilton Kenfack — Full-Stack Developer & AI Systems Engineer';
+const title = 'Hamilton Kenfack — Full-Stack Developer';
 const description =
   'Full-stack developer and creative technologist. I build AI-native products end to end — and I measure them.';
 
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     'Next.js',
     'React',
     'TypeScript',
-    'AI engineer',
+    'AI systems',
     'freelance developer',
     'Cameroon',
   ],
