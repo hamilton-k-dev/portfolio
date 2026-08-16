@@ -12,7 +12,9 @@
     ai:         { en: 'AI & Security',   fr: 'IA & Sécurité' },
     web:        { en: 'Web Platform',    fr: 'Plateforme Web' },
     tooling:    { en: 'Developer Tools', fr: 'Outils Dév' },
-    fintech:    { en: 'Fintech',         fr: 'Fintech' }
+    fintech:    { en: 'Fintech',         fr: 'Fintech' },
+    ecommerce:  { en: 'E-commerce',      fr: 'E-commerce' },
+    editorial:  { en: 'Editorial & CMS', fr: 'Éditorial & CMS' }
   };
 
   const STR = {
@@ -101,6 +103,22 @@
       desc:{ en:'A secure online voting system — create polls, cast votes securely and watch results update in real time.',
              fr:'Un système de vote en ligne sécurisé — créez des sondages, votez en toute sécurité et suivez les résultats en temps réel.' },
       links:[['github','https://github.com/hamilton-k-dev/online-voting-system']] },
+
+    { id:'specsheet', cat:'editorial', year:2026, glyph:'▤',
+      img:'/img/projects/specsheet.png',
+      title:'SPECSHEET — Device Reviews',
+      tags:['Next.js','Prisma','Tiptap','better-auth'],
+      desc:{ en:'Independent phone and laptop reviews with benchmark runs and head-to-head comparisons. A Postgres-backed CMS with a rich-text editor, image uploads, live search and a read-only demo mode.',
+             fr:"Tests indépendants de téléphones et d'ordinateurs portables, avec relevés de benchmarks et comparatifs. Un CMS sur Postgres avec éditeur riche, envoi d'images, recherche en direct et un mode démo en lecture seule." },
+      links:[['github','https://github.com/hamilton-k-dev/spec.sheet']] },
+
+    { id:'voltcrate', cat:'ecommerce', year:2026, glyph:'▣',
+      img:'/img/projects/voltcrate.png',
+      title:'Voltcrate — Refurb Storefront',
+      tags:['Next.js','better-auth','Prisma','Resend'],
+      desc:{ en:'A refurbished-electronics store with real authentication, a Postgres product catalogue, and a per-user cart and checkout that persist. One-click demo account, so the whole flow can be tried without registering.',
+             fr:"Une boutique d'électronique reconditionnée avec authentification réelle, catalogue en base Postgres, panier et commande persistés par utilisateur. Compte de démonstration en un clic, pour parcourir tout le tunnel sans s'inscrire." },
+      links:[['github','https://github.com/hamilton-k-dev/ecommerce']] },
 
     { id:'expense', cat:'fintech', year:2026, glyph:'◆',
       img:'/img/projects/expenseiq.png',
