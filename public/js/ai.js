@@ -14,7 +14,7 @@ HAMILTON KENFACK — PORTFOLIO KNOWLEDGE BASE
 IDENTITY
 - Hamilton Kenfack, Full-Stack Developer, AI Systems Engineer, and Creative Technologist.
 - Based in Yaoundé, works remote. Bilingual EN/FR. Open-source contributor. Available for freelance (from Q3 2026).
-- 6+ years of engineering, 47 projects delivered, 23 happy clients, 99.9% average system uptime.
+- 4+ years of engineering, 47 projects delivered, 23 happy clients, 99.9% average system uptime.
 - Philosophy: treats software like a craft and interfaces like cinema. Sweet spot = robust backend architecture + fluid frontend experiences + applied AI.
 
 SKILLS / EXPERTISE (proficiency)
