@@ -17,7 +17,7 @@
     // about
     about_eyebrow: '01 — Profil Numérique',
     about_title: 'Développeur, designer,<br />et penseur systèmes.',
-    about_p1: "Je suis <strong>Hamilton Kenfack</strong> — un développeur full-stack basé au Cameroun, qui traite le logiciel comme un artisanat et les interfaces comme du cinéma. Ces six dernières années, j'ai livré des systèmes en production pour des startups et agences dans la fintech, l'outillage IA et les plateformes développeurs.",
+    about_p1: "Je suis <strong>Hamilton Kenfack</strong> — un développeur full-stack basé au Cameroun, qui traite le logiciel comme un artisanat et les interfaces comme du cinéma. Ces quatre dernières années, j'ai livré des systèmes en production pour des startups et agences dans la fintech, l'outillage IA et les plateformes développeurs.",
     about_p2: "Mon terrain de jeu, c'est l'intersection d'une <strong>architecture backend robuste</strong>, d'<strong>expériences frontend fluides</strong> et de l'<strong>IA appliquée</strong> — pipelines RAG, workflows agentiques et automatisation qui fait discrètement le gros du travail.",
     stat_years: 'Ans de pratique', stat_projects: 'Projets livrés', stat_clients: 'Clients satisfaits', stat_uptime: 'Disponibilité système',
     tag_freelance: 'Freelance',
@@ -55,7 +55,7 @@
     // journey
     journey_eyebrow: '04 — Journal de Mission',
     journey_title: 'Le parcours jusqu\u2019ici.',
-    journey_sub: "Six ans, zéro employeur. Tout ce qui suit a été livré en indépendant — des contrats choisis, une architecture assumée, et une responsabilité directe envers ceux qui paient.",
+    journey_sub: "Quatre ans, zéro employeur. Tout ce qui suit a été livré en indépendant — des contrats choisis, une architecture assumée, et une responsabilité directe envers ceux qui paient.",
     tl_present: '2024 — AUJOURD\u2019HUI',
     tl1_title: 'Développeur Full-Stack & IA Freelance',
     tl1_desc: "Conception et livraison de produits nativement IA, de bout en bout, pour des fondateurs et de petites équipes — SaaS multi-locataire, workflows agentiques et pipelines RAG. En ce moment : SchoolX, une plateforme de gestion scolaire aux bulletins générés par IA.",
