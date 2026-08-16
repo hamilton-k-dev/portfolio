@@ -281,18 +281,59 @@
       note.style.color = '';
       let dots = 0;
       const di = setInterval(() => { dots = (dots + 1) % 4; note.textContent = (fr ? '// liaison' : '// uplink') + '.'.repeat(dots); }, 280);
-      setTimeout(() => {
+
+      const done = (label, text, colour) => {
         clearInterval(di);
-        sendBtn.classList.remove('sending'); sendBtn.classList.add('sent');
-        sendBtn.querySelector('.lbl').textContent = fr ? 'MESSAGE ENVOYÉ ✓' : 'MESSAGE SENT ✓';
-        note.textContent = fr ? '// signal reçu — réponse sous 24h' : '// signal received — response inbound within 24h';
-        note.style.color = 'var(--accent)';
-        form.reset();
-        setTimeout(() => {
-          sendBtn.classList.remove('sent');
-          sendBtn.querySelector('.lbl').textContent = (window.I18N && window.I18N.current === 'fr') ? 'TRANSMETTRE LE MESSAGE' : 'TRANSMIT MESSAGE';
-        }, 3200);
-      }, 2000);
+        sendBtn.classList.remove('sending');
+        sendBtn.querySelector('.lbl').textContent = label;
+        note.textContent = text;
+        note.style.color = colour;
+      };
+
+      // The success message is now written by the server's answer, not by a
+      // timer. Before this, the form told every visitor "message sent" without
+      // making a single request — enquiries vanished and the sender was told
+      // the opposite.
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          name: fName.value.trim(),
+          email: fEmail.value.trim(),
+          message: fMsg.value.trim(),
+          company: (document.getElementById('f-company') || {}).value || ''
+        })
+      })
+        .then((r) => r.json().then((d) => ({ ok: r.ok, d })))
+        .then(({ ok, d }) => {
+          if (!ok || !d.ok) throw new Error((d && d.error) || 'send failed');
+          sendBtn.classList.add('sent');
+          done(
+            fr ? 'MESSAGE ENVOYÉ ✓' : 'MESSAGE SENT ✓',
+            fr ? '// signal reçu — réponse sous 24h' : '// signal received — response inbound within 24h',
+            'var(--accent)'
+          );
+          form.reset();
+          setTimeout(() => {
+            sendBtn.classList.remove('sent');
+            sendBtn.querySelector('.lbl').textContent = (window.I18N && window.I18N.current === 'fr') ? 'TRANSMETTRE LE MESSAGE' : 'TRANSMIT MESSAGE';
+          }, 3200);
+        })
+        .catch(() => {
+          // A failure must never look like a success, and the message must not
+          // be lost: the fallback opens the visitor's mail client with what
+          // they already typed.
+          const subject = encodeURIComponent('Portfolio — ' + fName.value.trim());
+          const body = encodeURIComponent(fMsg.value.trim());
+          done(
+            fr ? 'ÉCHEC — RÉESSAYER' : 'FAILED — RETRY',
+            '',
+            '#ff8088'
+          );
+          note.innerHTML = fr
+            ? '// envoi impossible — <a href="mailto:hamiltonkenfack@gmail.com?subject=' + subject + '&body=' + body + '" style="color:inherit">écrivez-moi directement</a>'
+            : '// could not send — <a href="mailto:hamiltonkenfack@gmail.com?subject=' + subject + '&body=' + body + '" style="color:inherit">email me directly</a>';
+        });
     });
   }
 
