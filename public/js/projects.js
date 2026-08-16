@@ -110,7 +110,7 @@
       tags:['Next.js','Prisma','Tiptap','better-auth'],
       desc:{ en:'Independent phone and laptop reviews with benchmark runs and head-to-head comparisons. A Postgres-backed CMS with a rich-text editor, image uploads, live search and a read-only demo mode.',
              fr:"Tests indépendants de téléphones et d'ordinateurs portables, avec relevés de benchmarks et comparatifs. Un CMS sur Postgres avec éditeur riche, envoi d'images, recherche en direct et un mode démo en lecture seule." },
-      links:[['github','https://github.com/hamilton-k-dev/spec.sheet']] },
+      links:[['live','https://spec-sheet-eta.vercel.app/'],['github','https://github.com/hamilton-k-dev/spec.sheet']] },
 
     { id:'voltcrate', cat:'ecommerce', year:2026, glyph:'▣',
       img:'/img/projects/voltcrate.png',
@@ -118,7 +118,7 @@
       tags:['Next.js','better-auth','Prisma','Resend'],
       desc:{ en:'A refurbished-electronics store with real authentication, a Postgres product catalogue, and a per-user cart and checkout that persist. One-click demo account, so the whole flow can be tried without registering.',
              fr:"Une boutique d'électronique reconditionnée avec authentification réelle, catalogue en base Postgres, panier et commande persistés par utilisateur. Compte de démonstration en un clic, pour parcourir tout le tunnel sans s'inscrire." },
-      links:[['github','https://github.com/hamilton-k-dev/ecommerce']] },
+      links:[['live','https://ecommerce-smoky-sigma-64.vercel.app/'],['github','https://github.com/hamilton-k-dev/ecommerce']] },
 
     { id:'expense', cat:'fintech', year:2026, glyph:'◆',
       img:'/img/projects/expenseiq.png',
