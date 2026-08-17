@@ -40,7 +40,7 @@
       tags:['Next.js','TypeScript','Prisma','PostgreSQL','Multi-tenant'],
       desc:{ en:'A multi-tenant school-management platform for francophone schools — grades, timetables and report cards in one branded space, with your own domain and language, plus AI-generated report cards.',
              fr:'Une plateforme de gestion scolaire multi-locataire pour les écoles francophones — notes, emplois du temps et bulletins dans un seul espace à votre marque, avec votre domaine et votre langue, et des bulletins générés par IA.' },
-      links:[['live','https://schoolx-beta.vercel.app'],['github','https://github.com/hamilton-k-dev/schoolx']] },
+      links:[['live','https://schoolx-beta.vercel.app']] },
 
     { id:'chatflow', cat:'web', year:2026, glyph:'◐', featured:true,
       img:'/img/projects/chatflow.png',
@@ -106,10 +106,10 @@
 
     { id:'specsheet', cat:'editorial', year:2026, glyph:'▤',
       img:'/img/projects/specsheet.png',
-      title:'SPECSHEET — Device Reviews',
-      tags:['Next.js','Prisma','Tiptap','better-auth'],
-      desc:{ en:'Independent phone and laptop reviews with benchmark runs and head-to-head comparisons. A Postgres-backed CMS with a rich-text editor, image uploads, live search and a read-only demo mode.',
-             fr:"Tests indépendants de téléphones et d'ordinateurs portables, avec relevés de benchmarks et comparatifs. Un CMS sur Postgres avec éditeur riche, envoi d'images, recherche en direct et un mode démo en lecture seule." },
+      title:'SPECSHEET — AI-Assisted Device Reviews',
+      tags:['Next.js','Prisma','Tiptap','OpenRouter','better-auth'],
+      desc:{ en:'An AI co-writer built into the CMS: a one-line prompt produces the whole draft — title, body in the rich-text editor, tags and a real topical cover photo — validated against a strict schema, so a malformed answer is rejected rather than silently corrupting the form. Independent phone and laptop reviews with benchmark runs and comparisons.',
+             fr:"Un co-rédacteur IA intégré au CMS : un prompt d'une ligne produit le brouillon entier — titre, corps dans l'éditeur riche, tags et une vraie photo de couverture — validé contre un schéma strict, si bien qu'une réponse malformée est rejetée au lieu de corrompre le formulaire en silence. Tests indépendants de téléphones et d'ordinateurs portables, avec benchmarks et comparatifs." },
       links:[['live','https://spec-sheet-eta.vercel.app/'],['github','https://github.com/hamilton-k-dev/spec.sheet']] },
 
     { id:'voltcrate', cat:'ecommerce', year:2026, glyph:'▣',

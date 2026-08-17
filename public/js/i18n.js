@@ -44,7 +44,7 @@
     pcat_expenseiq: 'Fintech · Web',
     pdesc_expenseiq: "Suivez revenus, dépenses et budgets mensuels par catégorie, avec des graphiques sur six mois et une prise en charge native des devises africaines — XAF, XOF, NGN et plus. Français et anglais.",
     pcat_specsheet: 'Éditorial · CMS',
-    pdesc_specsheet: "Tests indépendants de téléphones et d'ordinateurs portables, avec relevés de benchmarks et comparatifs. Un CMS sur Postgres avec éditeur riche, envoi d'images, recherche en direct et un mode démo en lecture seule.",
+    pdesc_specsheet: "Un co-rédacteur IA intégré au CMS : un prompt d'une ligne produit le brouillon entier — titre, corps dans l'éditeur riche, tags et une vraie photo de couverture — validé contre un schéma strict, si bien qu'une réponse malformée est rejetée au lieu de corrompre le formulaire en silence. Tests indépendants de téléphones et d'ordinateurs portables, avec benchmarks et comparatifs.",
     pcat_voltcrate: 'E-commerce · Web',
     pdesc_voltcrate: "Une boutique d'électronique reconditionnée avec authentification réelle, catalogue en base Postgres, panier et commande persistés par utilisateur. Compte de démonstration en un clic, pour parcourir tout le tunnel sans s'inscrire.",
     pcat_quizmaster: 'Plateforme Web',

@@ -85,6 +85,14 @@ export async function POST(request: Request) {
     );
   }
 
+  // Stamped server-side in the reader's own timezone, so the header line means
+  // something regardless of where the sender was.
+  const stamp = new Date().toLocaleString("en-GB", {
+    dateStyle: "medium",
+    timeStyle: "short",
+    timeZone: process.env.CONTACT_TZ ?? "Africa/Douala",
+  });
+
   const key = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO;
 
@@ -112,14 +120,66 @@ export async function POST(request: Request) {
       // So a reply goes to the visitor rather than to the sending domain.
       // Without it, hitting Reply answers a noreply address.
       reply_to: email,
-      text: `${name} <${email}>\n\n${message}`,
+      text: [
+        `${name} <${email}>`,
+        "",
+        message,
+        "",
+        `— sent from the portfolio contact form, ${stamp}`,
+      ].join("\n"),
+      // Tables and inline styles, not flexbox: Outlook renders with Word's
+      // engine and drops modern layout entirely. Every colour is stated
+      // explicitly because clients that force dark mode invert unset ones.
       html: `
-        <div style="font-family:-apple-system,system-ui,sans-serif;max-width:560px">
-          <p style="margin:0 0 4px;font-size:13px;color:#888">New message from the portfolio</p>
-          <p style="margin:0 0 16px;font-size:16px"><strong>${escapeHtml(name)}</strong>
-            &lt;<a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a>&gt;</p>
-          <div style="white-space:pre-wrap;line-height:1.6;padding:16px;background:#f6f6f7;border-radius:8px">${escapeHtml(message)}</div>
-        </div>`,
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+       style="background:#0e0e12;padding:32px 12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+  <tr><td align="center">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="560"
+           style="width:560px;max-width:100%;background:#16161c;border-radius:14px;overflow:hidden;border:1px solid #26262e">
+
+      <tr><td style="padding:20px 26px;border-bottom:1px solid #26262e">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+          <td style="font-size:13px;font-weight:700;letter-spacing:.14em;color:#b07cff">HAMILTON KENFACK</td>
+          <td align="right" style="font-size:11px;color:#6f6f7d">${stamp}</td>
+        </tr></table>
+      </td></tr>
+
+      <tr><td style="padding:26px 26px 6px">
+        <p style="margin:0 0 18px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#6f6f7d">
+          New message from the portfolio
+        </p>
+        <p style="margin:0 0 2px;font-size:21px;font-weight:600;color:#f2f2f5;line-height:1.25">
+          ${escapeHtml(name)}
+        </p>
+        <p style="margin:0 0 22px;font-size:14px">
+          <a href="mailto:${escapeHtml(email)}" style="color:#b07cff;text-decoration:none">${escapeHtml(email)}</a>
+        </p>
+      </td></tr>
+
+      <tr><td style="padding:0 26px">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+               style="background:#101015;border-left:3px solid #b07cff;border-radius:0 8px 8px 0">
+          <tr><td style="padding:16px 18px;font-size:15px;line-height:1.65;color:#dcdce4;white-space:pre-wrap">${escapeHtml(message)}</td></tr>
+        </table>
+      </td></tr>
+
+      <tr><td style="padding:22px 26px 26px">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+          <td style="background:#b07cff;border-radius:999px">
+            <a href="mailto:${escapeHtml(email)}?subject=${encodeURIComponent("Re: your message")}"
+               style="display:inline-block;padding:11px 24px;font-size:14px;font-weight:600;color:#16161c;text-decoration:none">
+              Reply to ${escapeHtml(name.split(" ")[0] ?? name)}
+            </a>
+          </td>
+        </tr></table>
+        <p style="margin:16px 0 0;font-size:11px;color:#57576a;line-height:1.5">
+          Hitting reply in your client works too — the sender is set as reply-to.
+        </p>
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>`,
     }),
   }).catch(() => null);
 

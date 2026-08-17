@@ -10,61 +10,71 @@
   /* ---------- knowledge base (the only source of truth for the bot) ---------- */
   const KB = `
 HAMILTON KENFACK — PORTFOLIO KNOWLEDGE BASE
+Everything below is verifiable: shipped code, live URLs, or numbers that were measured.
+If a visitor asks something not covered here, say so plainly instead of inventing an answer.
 
 IDENTITY
-- Hamilton Kenfack, Full-Stack Developer, AI Systems Engineer, and Creative Technologist.
-- Based in Yaoundé, works remote. Bilingual EN/FR. Open-source contributor. Available for freelance (from Q3 2026).
-- 4+ years of engineering, 47 projects delivered, 23 happy clients, 99.9% average system uptime.
-- Philosophy: treats software like a craft and interfaces like cinema. Sweet spot = robust backend architecture + fluid frontend experiences + applied AI.
+- Hamilton Kenfack, full-stack developer, freelance. Based in Cameroon, works remote, bilingual EN/FR.
+- Four years of professional freelance work, preceded by self-taught years of first contracts and open source. No employer, ever — the architecture decisions were his and so was the on-call.
+- Available for select freelance work from Q3 2026.
+- How he works: builds AI-native products end to end, and measures them. Comfortable saying when a measurement contradicts the idea that started it.
 
-SKILLS / EXPERTISE (proficiency)
-- Frontend: React / Next.js (96%), TypeScript (93%), Tailwind CSS, Framer Motion, Three.js / WebGL.
-- Backend: Node.js / APIs (91%), PHP / Symfony (84%), PostgreSQL, REST & GraphQL, Redis & Queues.
-- AI & Intelligence: Python / AI APIs (88%), OpenAI & Claude APIs, RAG & vector DBs, agentic automation.
-- Infra / DevOps: Docker (82%), CI/CD, AWS, Vercel.
-- Backend expertise summary: designs robust, scalable APIs and data layers — Node.js/Express and PHP/Symfony services, PostgreSQL schemas, Redis caching and queues, REST & GraphQL. Has cut p95 latency by 60% on a multi-tenant SaaS and built PCI-compliant payment orchestration.
+STACK
+- Front: Next.js (App Router), React, TypeScript, Tailwind, Canvas/WebGL.
+- Back: Node, Prisma, PostgreSQL, better-auth, REST and server actions.
+- AI: structured outputs with schema validation and re-validation, RAG, eval harnesses, agent loops with a human in the loop.
+- Edge and infra: Cloudflare Workers, Vercel, quantised models at the edge.
+- Testing: node:test, Playwright, type-level tests, benchmarks that are allowed to disagree with him.
+- Earlier work also used PHP/Symfony, Vue and MySQL.
 
-PROJECTS (real, shipped — all open-source at github.com/hamilton-k-dev)
-- SchoolX (2026, Web/SaaS): Hamilton's flagship project. A multi-tenant school-management platform for francophone schools — grades (notes), timetables (emplois du temps) and report cards (bulletins) in one branded space, with each school's own brand, domain and language, plus AI-generated report cards. Stack: Next.js, TypeScript, Prisma, PostgreSQL, multi-tenant architecture. Live (schoolx-beta.vercel.app) + open-source. Featured / top project.
-- ChatFlow (2026, Web): production-ready real-time messaging app — private DMs, group chats, voice messages, search and live presence. Stack: Next.js 16, TypeScript, Socket.IO, Prisma. Live demo + open-source. Featured.
-- PhishGuard (2026, AI & Security): paste any suspicious URL and it scans in seconds — checking phishing indicators, malicious keywords and domain reputation with an ML classifier. Stack: Next.js, TypeScript, Machine Learning, Python. Live demo + open-source. Featured.
-- PDFForge (2026, Developer Tools): all-in-one browser PDF toolkit — merge, split, compress, convert, watermark and secure PDFs, entirely client-side with no installs. Stack: Next.js, TypeScript, pdf-lib. Live demo + open-source.
-- QuizMaster (2026, Web): modern quiz platform — build engaging quizzes, track student performance in real time and gain insights. Stack: Next.js, TypeScript, Prisma, PostgreSQL. Live demo + open-source.
-- Next.js Auth Starter (2026, Developer Tools): production-ready authentication starter — email & password, magic links, Google & GitHub OAuth, role-based access control, email verification and password reset. Stack: Next.js 16, better-auth, Prisma, Neon, Resend. Live demo + open-source.
-- Basic-Auth Module (2025, Developer Tools): lightweight, drop-in authentication module with login and registration flows. Stack: Next.js 15, TypeScript. Live demo + open-source.
-- Next.js + Prisma Auth System (2025, Developer Tools): full-stack auth with credential and social login (Google & GitHub), role-based access control, email verification and two-factor authentication via email OTP. Stack: Next.js, Prisma, PostgreSQL. Open-source.
-- Online Voting System (2025, Web): secure online voting system — create polls, vote securely and view real-time results. Stack: Next.js, Prisma, MySQL. Open-source.
-- Expense Tracker (2025, Fintech): personal finance tracker — log income and expenses with category breakdowns and visual reports. Stack: Next.js, TypeScript, Charts. Open-source.
+SELECTED PROJECTS
+- SchoolX (in development) — multi-tenant school management for francophone schools: grades, timetables and report cards under each school's own subdomain, language and branding, with AI-written report card comments. Next.js 16, BetterAuth, Prisma 7, Neon, next-intl. Live beta at schoolx-beta.vercel.app; the repo is private for now, so there is no GitHub link for this one.
+- SPECSHEET — independent phone and laptop reviews, built around an AI co-writer inside the CMS. A one-line prompt produces the entire draft: title, full article body written straight into the rich-text editor, tags, and a real topical cover photo found via the Wikimedia Commons API rather than a stock placeholder. The model returns structured JSON checked against a strict Zod schema, so a malformed answer is rejected instead of silently corrupting the form. Generations are rate-limited per account in the database (survives serverless cold starts), and the public demo account gets a real working allowance of 2 a day so visitors can actually try it. Also: Postgres CMS, image uploads, live search, read-only demo mode. Live at spec-sheet-eta.vercel.app.
+- PhishGuard — paste a suspicious URL and it scans in seconds: phishing indicators, malicious keywords, domain reputation, via an ML classifier.
+- Voltcrate — refurbished-electronics storefront with real authentication, a Postgres catalogue, and a per-user cart and checkout that persist. One-click demo account so the whole flow can be tried without registering. Live at ecommerce-smoky-sigma-64.vercel.app.
+- ExpenseIQ — personal finance tracker: budgets per category, six-month charts, French and English, and first-class support for African currencies (XAF, XOF, NGN). Live at expense-tracker-ppup.vercel.app.
+- Also in the archive: ChatFlow (real-time messaging with DMs, group chats, voice notes and presence), PDFForge (merge, split, compress and secure PDFs entirely in the browser), QuizMaster (quiz platform with live student tracking), and a production-ready Next.js auth starter with email/password, magic links, OAuth and role-based access.
+- Everything public is at github.com/hamilton-k-dev.
 
-EXPERIENCE / JOURNEY
-- 2024–present: Freelance Full-Stack & AI Engineer — AI-native products for startups worldwide; agentic systems, RAG pipelines, cinematic web experiences.
-- 2022–2024: Senior Software Engineer at Northwind Labs — led platform team, multi-tenant SaaS for 80k+ users, cut p95 latency 60%, first ML recommendation layer.
-- 2020–2022: Full-Stack Developer at Helix Studio — bespoke web platforms for fintech & e-commerce; Symfony APIs to award-considered frontends.
-- 2019–2020: Junior Developer & Open Source — production code, OSS contributions.
+THE LAB — twelve small projects, each built to answer one question and then actually measured
+- whisper-to-diagram: describe an architecture out loud, get a diagram. The model never writes Mermaid; it fills a Zod schema and the client renders it. Constrained output beats free text.
+- prompt-forge: an A/B bench that catches prompt regressions. On a real eight-case eval set, haiku-4.5 matched opus-5 everywhere and beat it on one case — same quality, roughly five times cheaper.
+- tinyrag: RAG in 231 lines, zero dependencies, entirely in the browser. Under about 5k chunks a brute-force cosine scan is enough — no vector index needed. The real cost of "no server" is a 25 MB model on first load.
+- use-glass: a React hook for glassmorphism that keeps the frame rate. The premise was DISPROVED: the off-screen visibility gate buys nothing on modern Chromium, 76.6 against 75.5 FPS. What does work is halving the blur radius, 76 to 95 FPS. The README says so in a titled section.
+- ts-result: Rust-style Result types for TypeScript. 689 bytes gzipped for the full surface, 123 for ok/err/match. Writing the type tests found a real inference bug in andThen.
+- webgl-grid: an infinite pan and zoom grid in a fragment shader. 120 FPS flat across a 1200x density range. But the honest nuance is that a well-written canvas2D grid is not slow — the real argument is content-independent cost, not raw speed.
+- inbox-triage: an agent that labels threads and drafts replies. "Draft, never send" is enforced by never requesting the gmail.send scope, so the guarantee is Google's rather than his restraint.
+- deploy-sentinel: watches a deployment and rolls back when a route degrades. Per-route baselines and Wilson intervals, so two failures out of twelve at 3 a.m. do not trigger a rollback. Observe-only until you pass --arm.
+- synthwave-synth: a browser synth with a generative arpeggiator. A lookahead scheduler is exact; a self-correcting setTimeout averages 2.6 ms of error but still drops single notes 97 ms late. For rhythm, the average is the wrong statistic.
+- focusboard: a local-first, keyboard-only task board. The CRDT merge is demonstrated rather than promised — two separate browser profiles edit offline, exchange a file and converge. Conflict resolves per field, not per task.
+- edge-inference: an int8 spam classifier running inside a Cloudflare Worker. 98.83% accuracy in 32 kB, 47 ms p50 against 1219 ms for a frontier model on the same messages. Cold start turned out NOT to matter: 167 ms cold against 170 ms warm.
+- latency-budgets: seven waiting-interfaces over one identical backend. Time-to-first-feedback does not discriminate — all seven hit 1 ms, plain spinner included. What separates them is the longest stretch where nothing changes on screen.
+- Three of the twelve came out against the idea that started them, and the READMEs say so rather than burying it: quantisation was free, the cache layer bought nothing, and a skeleton is identical to a spinner to the millisecond.
 
-LAB (experiments)
-- AI Experiments: Whisper-to-Diagram (voice → architecture diagrams, WIP), Prompt Forge (prompt A/B regression harness, live), TinyRAG (200-line in-browser RAG engine, live).
-- Open Source: use-glass (React glassmorphism hook, 1.2k stars), ts-result (Rust-style Result types for TS), webgl-grid (infinite scroll grid shader, archived).
-- Automation: Inbox Triage Bot (LLM labels & drafts replies, live), Deploy Sentinel (auto-rollback on CI anomaly, WIP).
-- Side Projects: Synthwave Synth (web-audio synth with generative arpeggiator, live), Focusboard (local-first task board, WIP).
-- R&D: Edge Inference (quantized models on Cloudflare Workers, WIP), Latency Budgets (sub-100ms agentic UX research, WIP).
+JOURNEY
+- 2024 to today: freelance full-stack and AI developer — AI-native products end to end for founders and small teams.
+- 2022 to 2024: freelance product developer — SaaS and platforms, taken from empty repo to production: architecture, auth, data model, deployment, and the on-call.
+- Before 2022: self-taught in Yaoundé — first paid sites, first open-source pull requests, first invoices, then agency contracts with Symfony APIs and Vue frontends. The years that taught the craft, before it became the job.
 
 CONTACT
-- GitHub: github.com/hamilton-k-dev (all projects above are open-source here). LinkedIn /in/hamiltonkenfack, X @hk_builds, Upwork (Top Rated, 100% job success).
+- Email hamiltonkenfack@gmail.com, or the contact form at the bottom of this page.
+- GitHub: github.com/hamilton-k-dev.
+- If asked about rates, availability beyond Q3 2026, or anything not written above, say it is best asked directly by email — do not guess.
 `;
+
 
   const UI = {
     launch:  { en: 'Ask Hamilton AI', fr: 'Demander à Hamilton AI' },
     name:    { en: 'Hamilton AI', fr: 'Hamilton AI' },
     status:  { en: 'online · trained on this portfolio', fr: 'en ligne · entraîné sur ce portfolio' },
-    greet:   { en: "Hi! I'm Hamilton's portfolio assistant. Ask me about his projects, skills, experience, or the lab.",
-               fr: "Salut ! Je suis l'assistant du portfolio d'Hamilton. Posez-moi des questions sur ses projets, compétences, expérience ou le lab." },
+    greet:   { en: "Hi — I'm the assistant for Hamilton's portfolio. Ask about the projects, the stack, or the lab. I only answer from what's on this site; anything else is better asked by email.",
+               fr: "Bonjour — je suis l'assistant du portfolio d'Hamilton. Posez vos questions sur les projets, la stack ou le lab. Je réponds uniquement à partir de ce site ; pour le reste, mieux vaut écrire directement." },
     ph:      { en: 'Ask anything…', fr: 'Posez votre question…' },
-    suggest: { en: ['What projects did Hamilton build?', 'What is his backend expertise?', 'Tell me about the AI work', "What's in the lab?"],
-               fr: ['Quels projets Hamilton a-t-il construits ?', 'Quelle est son expertise backend ?', 'Parle-moi de son travail en IA', "Qu'y a-t-il dans le lab ?"] },
+    suggest: { en: ['What has he actually shipped?', 'Which lab results were negative?', 'What does he use for AI features?', 'Is he available for work?'],
+               fr: ['Qu\u2019a-t-il r\u00e9ellement livr\u00e9 ?', 'Quels r\u00e9sultats du lab \u00e9taient n\u00e9gatifs ?', 'Que utilise-t-il pour l\u2019IA ?', 'Est-il disponible ?'] },
     err:     { en: '// signal lost — please try again', fr: '// signal perdu — réessayez' },
-    nokey:   { en: "The AI assistant isn't available in this preview, but here's what I know: Hamilton is a full-stack & AI engineer — ask about his projects, backend expertise, or the lab once this is deployed.",
-               fr: "L'assistant IA n'est pas disponible dans cet aperçu, mais voici l'essentiel : Hamilton est ingénieur full-stack & IA — posez vos questions sur ses projets, son expertise backend ou le lab une fois déployé." }
+    nokey:   { en: "The assistant isn't wired up in this preview. The short version: Hamilton is a freelance full-stack developer based in Cameroon — twelve measured lab projects and a handful of shipped products, all linked on this page. Email hamiltonkenfack@gmail.com to reach him directly.",
+               fr: "L'assistant n'est pas actif dans cet aper\u00e7u. En bref : Hamilton est d\u00e9veloppeur full-stack freelance bas\u00e9 au Cameroun \u2014 douze projets de lab mesur\u00e9s et plusieurs produits livr\u00e9s, tous li\u00e9s sur cette page. \u00c9crivez \u00e0 hamiltonkenfack@gmail.com pour le joindre." }
   };
   const t = (o) => o[lang()] != null ? o[lang()] : o.en;
 
@@ -141,7 +151,7 @@ CONTACT
     const typing = showTyping();
 
     const replyLang = lang() === 'fr' ? 'French' : 'English';
-    const preamble = `You are "Hamilton AI", the friendly assistant embedded in Hamilton Kenfack's portfolio website. Answer ONLY using the knowledge base below. If something isn't covered, say you don't have that detail and suggest contacting Hamilton. Keep answers concise (2-5 sentences), confident, lightly futuristic in tone. You may use **bold** for emphasis. Always reply in ${replyLang}.\n\n${KB}`;
+    const preamble = `You are "Hamilton AI", the friendly assistant embedded in Hamilton Kenfack's portfolio website. Answer ONLY using the knowledge base below. If something isn't covered, say you don't have that detail and suggest contacting Hamilton. Keep answers concise (2-5 sentences) and specific: prefer a measured number or a project name over an adjective. Never invent a client, an employer, a metric or a star count \u2014 Hamilton has never had an employer, and the lab numbers below are the only ones that exist. If a visitor asks about rates or anything outside the knowledge base, say it is best asked by email rather than guessing. You may use **bold** for emphasis. Always reply in ${replyLang}.\n\n${KB}`;
 
     try {
       if (!(window.claude && typeof window.claude.complete === 'function')) throw new Error('no-claude');
